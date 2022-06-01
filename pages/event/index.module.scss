@@ -1,0 +1,531 @@
+@font-face {
+  font-family: Proxima Nova Semibold;
+  src: url(/fonts/ProximaNova-Semibold.woff);
+}
+
+@font-face {
+  font-family: Proxima Nova Bold;
+  src: url(/fonts/ProximaNova-Semibold.woff);
+}
+
+@font-face {
+  font-family: Proxima Nova Regular;
+  src: url(/fonts/ProximaNova-Regular.woff);
+}
+
+@font-face {
+  font-family: Termina Demi;
+  src: url(/fonts/Termina-Demi.otf);
+}
+
+@font-face {
+  font-family: Termina Bold;
+  src: url(/fonts/Termina-Bold.otf);
+}
+
+.mainContainer {
+  background-color: #020005;
+  p,
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.topNav {
+  width: 100%;
+  height: 4.375rem;
+  background-color: #ffd426;
+  display: flex;
+  padding: 0 10rem 0 10rem;
+  align-items: center;
+  justify-content: space-between;
+  .leftContainer {
+    display: flex;
+    align-items: center;
+    .brandIcon {
+      height: 1.5625rem;
+      width: 1.5625rem;
+    }
+    .brandName {
+      color: rgba(0, 0, 0, 0.9);
+      font-family: Termina Demi;
+      margin-left: 0.75rem;
+    }
+  }
+  .rightContainer {
+    .display: flex;
+    .navlink {
+      margin-left: 2rem;
+      color: rgba(0, 0, 0, 0.9);
+      background: none;
+      border: none;
+      font-family: Proxima Nova Regular;
+    }
+  }
+}
+
+.infoContainer1 {
+  margin: 3.5rem 10rem 2.5rem 10rem;
+  height: 6.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .breadCrump {
+    font-family: Proxima Nova Regular;
+    color: #fff8;
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+  .bottomPart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .leftPart {
+      .title {
+        font-family: Proxima Nova Semibold;
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .dateNLocation {
+        display: flex;
+        .date {
+          margin-left: 0.5rem;
+          color: #f9de71;
+          font-family: Proxima Nova Semibold;
+        }
+        .location {
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+    .share {
+      padding: 0.75rem 2rem;
+      background-color: rgba(75, 75, 75, 0.45);
+      color: rgba(255, 255, 255, 0.8);
+      display: flex;
+      font-size: 1.125rem;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.heroCard {
+  margin: 2.5rem 10rem 2.75rem 10rem;
+  height: calc(100vw / 2.5 - 20rem / 2.5);
+  background-color: #ffd426;
+  border-radius: 2rem;
+  background-size: cover;
+  background-position: center;
+  .calendarCard {
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 1rem;
+    position: relative;
+    top: calc(100vw / 2.5 - 20rem / 2.5 - 5.625rem);
+    left: calc(100% - 9.75rem);
+    .month {
+      background-color: rgb(229, 115, 115);
+      height: 1.875rem;
+      font-family: Proxima Nova Semibold;
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem 1rem 0 0;
+    }
+    .date {
+      height: 3.75rem;
+      background-color: #fffbe9;
+      font-family: Proxima Nova Semibold;
+      font-size: 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .week {
+      height: 1.875rem;
+      background-color: #e5e5e6;
+      color: rgba(79, 79, 79, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 0 1rem 1rem;
+    }
+  }
+}
+
+.instructorInfo1 {
+  height: 3.375rem;
+  width: calc(100vw - 20rem - 500px);
+  margin-left: 10rem;
+  display: flex;
+  .text {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .topLine {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.4rem;
+      font-family: Proxima Nova Semibold;
+    }
+    .bottomLine {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1rem;
+      line-height: 19.2px;
+    }
+  }
+  .image {
+    height: 3.375rem;
+    width: 3.375rem;
+    border-radius: 50%;
+    background-color: lightblue;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.middleSection {
+  display: grid;
+  grid-template-columns: auto 500px;
+  margin: 2rem 10rem 0 10rem;
+  color: rgba(255, 255, 255, 0.9);
+  .left {
+    .header {
+      color: rgba(255, 255, 255, 0.9);
+      font-family: Proxima Nova Semibold;
+      font-size: 1.4rem;
+    }
+    .tagsContainer {
+      margin-top: 1.5rem;
+      .tag {
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+        margin-right: 1.25rem;
+        color: rgba(0, 0, 0, 0.9);
+        align-items: center;
+      }
+    }
+    .aboutHeader {
+      margin-top: 1.5rem;
+      margin-bottom: 0.25rem;
+      font-family: Proxima Nova Bold;
+      font-size: 1rem;
+    }
+    .aboutText {
+      font-family: Proxima Nova Regular;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      .list {
+        list-style: decimal inside;
+        padding-left: 0;
+      }
+    }
+    .knownFor {
+      padding-top: 2.75rem;
+      margin-top: 1rem;
+      border-top: 1px solid rgb(45, 45, 45);
+      .header {
+        font-family: Proxima Nova Semibold;
+        font-size: 1.4rem;
+        letter-spacing: 0.03rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .highlights {
+        margin-top: 1.25rem;
+        .jamun {
+          margin-bottom: 1.5rem;
+        }
+        .underline {
+          height: 1.5rem;
+          border-bottom: 1px solid rgb(45, 45, 45);
+          margin-bottom: 3.5rem;
+        }
+      }
+    }
+    .whatsIncluded {
+      .header {
+        font-family: Proxima Nova Semibold;
+        font-size: 1.4rem;
+        letter-spacing: 0.03rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .teaks {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 1.25rem;
+        .teak {
+          margin-right: 1.25rem;
+          margin-bottom: 2.25rem;
+        }
+      }
+      border-bottom: 1px solid rgb(45, 45, 45);
+      margin-bottom: 4.125rem;
+    }
+    .hippo {
+      width: 100%;
+      padding: 1.75rem 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    .mantisShrimp {
+      position: sticky;
+      top: 0;
+      flex-grow: 0;
+    }
+  }
+}
+
+.mobileMainContainer {
+  @media (min-width: 768px) {
+    display: none;
+  }
+  color: white;
+  background-color: #0d031b;
+  padding-bottom: 100px;
+  .heroSection {
+    width: 100vw;
+    height: 140vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding: 14px 58px 31px 12px;
+    .brandName {
+      flex-grow: 1;
+      color: rgba(255, 255, 255, 0.9);
+      font-family: Termina Bold;
+    }
+    .title {
+      flex-grow: 0;
+      font-family: Proxima Nova Semibold;
+      font-size: 1.4rem;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .location {
+      flex-grow: 0;
+      font-family: Proxima Nova Regular;
+      font-size: 0.75rem;
+      margin-top: 8px;
+    }
+  }
+  .whatsIncluded {
+    .header {
+      margin: 60px 0 0 16px;
+      font-size: 20px;
+      font-family: Proxima Nova Semibold;
+      color: rgba(255, 255, 255, 0.75);
+      img {
+        margin-right: 10px;
+      }
+    }
+    .teaks {
+      display: flex;
+      overflow: scroll;
+      margin-top: 30px;
+      margin-bottom: 45px;
+      .teak {
+        flex-shrink: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+  .instructorInfo4 {
+    // height: 3.375rem;
+    width: calc(100vw - 24px);
+    margin: 20px 12px;
+    display: flex;
+    .text {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .topLine {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.25rem;
+        font-family: Proxima Nova Semibold;
+        margin: 0;
+      }
+      .bottomLine {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        line-height: 19.2px;
+        margin: 0;
+      }
+    }
+    .image {
+      height: 3.375rem;
+      width: 3.375rem;
+      border-radius: 50%;
+      background-color: lightblue;
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+  }
+  .eventInformation {
+    margin: 20px 12px;
+    .label {
+      font-family: Proxima Nova Semibold;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .tagsContainer {
+      margin-top: 20px;
+    }
+    .tag {
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.25rem;
+      margin-right: 1.25rem;
+      color: rgba(0, 0, 0, 0.9);
+      align-items: center;
+      font-family: Proxima Nova Semibold;
+      font-size: 0.75rem;
+    }
+    .eventLabel {
+      font-family: Proxima Nova Semibold;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-top: 20px;
+    }
+    .eventdescription {
+      font-family: Proxima Nova Regular;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 125%;
+      .list {
+        list-style: decimal inside;
+        padding-left: 0;
+      }
+    }
+  }
+  .hippo {
+    width: 100%;
+    padding: 22px 12px;
+    margin-bottom: 3rem;
+  }
+  .actionContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    padding: 30px 12px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1c25;
+    .priceText {
+      flex-grow: 1;
+    }
+    .chooseDateButton {
+      color: black;
+      flex-grow: 0;
+      font-family: Proxima Nova Semibold;
+      font-size: 0.875rem;
+      background-color: #ffd426;
+      border: none;
+      width: 140px;
+      height: 40px;
+      border-radius: 12px;
+      &:active {
+        background: rgb(187, 154, 22);
+      }
+    }
+  }
+  .dateSelect {
+    z-index: 10;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+  }
+  .upcomingDates {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 24px 10px;
+    margin: 100px 12px;
+    border-radius: 10px;
+    font-family: Proxima Nova Semibold;
+    font-size: 1rem;
+    .topSection {
+      display: flex;
+      justify-content: space-between;
+      p {
+        margin: 0;
+      }
+      .closeButton {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+    .twoSideField {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      margin-top: 0;
+      .leftSide {
+        .top {
+          font-family: Proxima Nova Semibold;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 1rem;
+          margin-bottom: 0;
+        }
+        .bottom {
+          font-family: Proxima Nova Regular;
+          color: rgba(255, 255, 255, 0.75);
+          font-size: 0.75rem;
+          margin-top: 4px;
+        }
+      }
+      .rightSide {
+        p {
+          font-family: Proxima Nova Semibold;
+          margin-bottom: 0;
+        }
+        button {
+          color: black;
+          padding: 8px 20px;
+          border-radius: 7px;
+          border: none;
+          background-color: #ffd426;
+          margin-top: 8px;
+          &:active {
+            background: rgb(187, 154, 22);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Event Page Select
+.mainDiv {
+  background-color: #15133c;
+  height: 100vh;
+}
+.mainHeading {
+  font-family: Proxima Nova Bold;
+  font-size: 1.9rem;
+  color: #e5e5e6;
+  margin-top: 0;
+}
+.eventCard {
+  background-color: #ffd426;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 3%;
+  margin: 2%;
+}

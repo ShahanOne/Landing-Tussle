@@ -1,0 +1,84 @@
+@font-face {
+  font-family: Proxima Nova Semibold;
+  src: url(/fonts/ProximaNova-Semibold.woff);
+}
+
+@font-face {
+  font-family: Proxima Nova Regular;
+  src: url(/fonts/ProximaNova-Regular.woff);
+}
+
+.mainContainer{
+  background-color: #1B1C25;
+  p{
+    margin: 0;
+  }
+}
+
+.instructorDetails{
+  display: flex;
+  .image{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: lightblue;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+  }
+  .text{
+    margin-left: 1rem;
+    .title{
+      font-family: Proxima Nova Semibold;
+      color: rgba(255,255,255,0.8);
+      font-size: 1.4rem;
+      @media (max-width: 767px) {
+        font-size: 1rem;
+      }
+    }
+    .verifiedField{
+      display: flex;
+      align-items: center;
+      font-family: Proxima Nova Semibold;
+      font-size: 0.875rem;
+      margin: 1.25rem 0;
+      .verifiedIcon{
+        height: 1.125rem;
+        width: 1.125rem;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+      }
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+    .qual{
+      font-family: Proxima Nova Regular;
+      font-size: 1rem;
+      @media (max-width: 767px) {
+        font-size: 0.75rem;
+      }
+    }
+    .instructorDetails{
+      font-family: Proxima Nova Regular;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      @media (max-width: 767px) {
+        margin-top: 1rem;
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+.contact{
+  margin: 1.75rem 0 2.25rem calc(55px + 1rem);
+  padding: 0.75rem 2rem;
+  background-color: rgba(75, 75, 75, 0.45);
+  border-radius: 0.5rem;
+  color: #F9DE71;
+  border: none;
+  @media (max-width: 767px) {
+    // display: none;
+  }
+}

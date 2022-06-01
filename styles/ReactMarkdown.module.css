@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../assets/fonts/ProximaNova.otf') format('opentype');
+}
+
+.lolo {
+  font-family: 'ProximaNova';
+  font-size: 36px;
+}

@@ -1,0 +1,154 @@
+@font-face {
+  font-family: Proxima Nova Semibold;
+  src: url(/fonts/ProximaNova-Semibold.woff);
+}
+
+.mainContainer{
+  width: 415px;
+  padding: 20px;
+  border: 1px solid rgba(234, 234, 234, 0.45);
+  border-radius: 1rem;
+  background-color: #1B1C25;
+  box-shadow: 0px 4px 42px rgba(255, 255, 255, 0.25);
+  h3, p {
+    margin: 0;
+  }
+  h3{
+    font-family: Proxima Nova Semibold;
+  }
+  :global(.Typography-Body18-Semibold){
+    font-family: Proxima Nova Semibold;
+    font-size: 1.125rem;
+    line-height: 120%;
+  }
+  :global(.Typography-Body16-Regular){
+    font-family: Proxima Nova Semibold;
+    font-size: 1rem;
+    line-height: 135%;
+  }
+  :global(.Typography-fruitpunch){
+    background: linear-gradient(90.8deg, #F5B8FF 0%, #FFBE45 100%);
+    background-clip: text;
+    color: transparent;
+  }
+  .topContainer{
+    padding-bottom: 0.5rem;
+    .dateContainer{
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      .calendarIcon{
+
+      }
+      .dateText{
+        color: rgb(249, 222, 113);
+      }
+      .zoomLogo{
+
+      }
+    }
+    border-bottom: 1px solid rgb(45,45,45);
+  }
+  .middleContainer{
+    padding: 1.25rem 0 2rem 0;
+    border-bottom: 1px solid rgb(45,45,45);
+    .twoPartDescription{
+      display: flex;
+      justify-content: space-between;
+      font-family: Proxima Nova Semibold;
+      padding: 14.5px 0;
+    }
+    .reservedConfirmation{
+      margin-top: 22px;
+    }
+    .eventLink{
+      margin-top: 0.5rem;
+      color: #F9DE71;
+      display: block;
+    }
+    .rsvpContainer{
+      margin: 1.25rem 0;
+      padding: 11px 0;
+      display: flex;
+      .goingText{
+        flex-grow: 1;
+      }
+      button{
+        flex-grow: 0;
+        padding: 0.25rem 1.5rem;
+        border-radius: 200px;
+        border: none;
+        margin-left: 1rem;
+        background-color: rgba(75, 75, 75, 0.45);
+        color: rgba(255,255,255,0.8);
+      }
+    }
+    .guestsCount{
+      margin-top: 1.25rem;
+      .signedUp{
+        color: rgba(255,255,255,0.8);
+        margin-top: 0.25rem;
+      }
+      .yesNoMaybe{
+        color: rgba(255,255,255,0.8);
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  .bottomContainer{
+    padding-top: 1rem;
+    padding-bottom: 4px;
+    .startsin{
+      display: flex;
+      justify-content: center;
+    }
+    .textField {
+      margin: 1rem 12.5px 0.5rem;
+      width: calc(100% - 25px);
+      padding-top: 11.5px;
+      padding-bottom: 11.5px;
+      border-radius: 0.5rem;
+      label{
+        background-color: red;
+      }
+      :global(.MuiOutlinedInput-root){
+        border: 1px solid rgba(234, 234, 234, 0.45);
+      }
+      input {
+        border: 1px solid rgba(234, 234, 234, 0.45);
+        color: #fff8;
+      }
+      .select {
+        color: rgba(255, 255, 255, 0.9);
+        svg {
+          color: white;
+        }
+      }
+      :global(.MuiInputLabel-root) {
+        background-color: #1b1c25;
+        color: #fff8;
+        &[data-shrink='true'] {
+          color: #F9DE71;
+        }
+      }
+      :global(.Mui-focused) {
+        :global(.MuiOutlinedInput-notchedOutline) {
+          border-color: #F9DE71;
+        }
+      }
+    }
+    .bottomButton {
+      color: rgba(0,0,0,0.9);
+      background-color: #ffd426;
+      border: none;
+      margin: 0.5rem 12.5px;
+      width: calc(100% - 25px);
+      padding-top: 11.5px;
+      padding-bottom: 11.5px;
+      border-radius: 12px;
+      &:active{
+        background: rgb(187,154,22);
+      }
+    }
+  }
+}

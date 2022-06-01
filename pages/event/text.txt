@@ -1,0 +1,54 @@
+🤰🏻 About the Event
+              Join us this Saturday as we discuss the Role of Doula during Pregnancy & Birth. Doula as a word is still relatively unknown in India. Pregnancy knowledge and care that expecting parents get is still concentrated around what their Doctor will tell them during the numbered prenatal visits they have at the hospital. Fortunately, since the last few years, the concept of Childbirth educators as well as Doulas has started becoming popular in India. While the word Childbirth Educator is a bit self-explanatory, the word Doula still holds a lot of mystery around it. And that’s what we are going to uncover together
+              read more
+
+
+
+
+              🎙Host: Bharti Goel
+              Bharti is a CAPPA Certified Child-Birth Educator & Internationally Certified Prenatal Yoga Expert. She loves helping expecting moms to have a comfortable and pain free pregnancy as well as a positive child birthing experience.
+
+              Bharti also has an immersive 4 week Natural Birth Preparation Program starting March 19th to help moms-to-be in their 2nd & 3rd trimester prepare physically & mentally for a natural birth.
+
+              Link to her 4 week program on Natural Birth Preparation (only 10 spots left): https://courses.tussle.fit/pregnancy-and-natural-birth-preparation/
+
+
+              Bharti's Youtube (3M+ views): https://www.youtube.com/c/BhartiYoga
+              Bharti's Instagram: www.instagram.com/herhealthcareathome
+              ---------
+
+              🎗 Guest Expert: Sanam M. Manchanda
+              Sanam is an Internationally Certified Labor & Birth Doula, Childbirth Educator, Lactation Support Specialist and Newborn Massage Practitioner. She has been working with expecting parents for over a decade by educating and supporting them through their pregnancy, child birthing and breastfeeding journey.
+              Sanam's Instagram: https://instagram.com/newbeginningzz?utm_medium=copy_link
+
+              ---------
+
+              🤰🏻 Who is the event for:
+              Any and all pregnant women! If you are currently pregnant (or know someone who is), we highly recommend registering for this event while spots last.
+
+              Tussle.Fit
+              Host
+
+              Contact the Host
+              Join Details
+              Once you register, you will be able to join the event.
+
+
+
+
+<Container
+  className="Parallax-module__elements--HkPSY"
+  scrollAxis="vertical"
+>
+  <Parallax
+    className="fixed top-0 left-0 w-32 h-32"
+    endScroll={200}
+    startScroll={0}
+    translateX={[
+      0,
+      648
+    ]}
+  >
+    <Element name="1" />
+  </Parallax>
+</Container>
