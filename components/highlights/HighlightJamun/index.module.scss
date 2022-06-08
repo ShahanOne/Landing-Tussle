@@ -1,34 +1,36 @@
 @font-face {
   font-family: Proxima Nova Semibold;
   src: url(/fonts/ProximaNova-Semibold.woff);
+  font-display: swap;
 }
 
 @font-face {
   font-family: Proxima Nova Regular;
   src: url(/fonts/ProximaNova-Regular.woff);
+  font-display: swap;
 }
 
-.mainContainer{
+.mainContainer {
   display: flex;
   align-items: center;
-  p{
+  p {
     margin: 0;
   }
 }
 
-.icon{
+.icon {
   height: 27px;
   width: 27px;
   margin: 0.25rem 0.5rem 0 0;
 }
 
-.textContainer{
-  .header{
+.textContainer {
+  .header {
     font-family: Proxima Nova Regular;
     font-size: 1.125rem;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
   }
-  .description{
+  .description {
     font-family: Proxima Nova Regular;
     font-size: 1rem;
     color: #fff8;

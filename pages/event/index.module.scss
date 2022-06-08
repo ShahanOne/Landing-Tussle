@@ -1,26 +1,31 @@
 @font-face {
   font-family: Proxima Nova Semibold;
   src: url(/fonts/ProximaNova-Semibold.woff);
+  font-display: swap;
 }
 
 @font-face {
   font-family: Proxima Nova Bold;
   src: url(/fonts/ProximaNova-Semibold.woff);
+  font-display: swap;
 }
 
 @font-face {
   font-family: Proxima Nova Regular;
   src: url(/fonts/ProximaNova-Regular.woff);
+  font-display: swap;
 }
 
 @font-face {
   font-family: Termina Demi;
   src: url(/fonts/Termina-Demi.otf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: Termina Bold;
   src: url(/fonts/Termina-Bold.otf);
+  font-display: swap;
 }
 
 .mainContainer {

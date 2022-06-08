@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Proxima Nova Regular;
+  src: url(/fonts/ProximaNova-Regular.woff);
+}
+.markdown {
+  box-sizing: border-box;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  background-color: #062c30;
+  width: 100%;
+  min-height: 300px;
+  padding: 5px;
+  p {
+    font-size: 18px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 10px 0;
+    font-family: Proxima Nova Regular;
+  }
+}
+
+.markdown > * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}

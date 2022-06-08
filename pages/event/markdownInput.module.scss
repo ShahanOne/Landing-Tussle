@@ -1,0 +1,22 @@
+.headings {
+  color: #e1addc;
+  font-size: 1.6rem;
+  margin-bottom: 2% !important;
+}
+.mdinp {
+  color: #ffffff;
+  box-shadow: rgba(191, 94, 159, 0.25) 0px 50px 100px -20px,
+    rgba(149, 63, 127, 0.3) 0px 30px 60px -30px;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 20px;
+  width: 100%;
+  resize: none;
+  background-color: #7f4782;
+  &:focus {
+    background-color: #570a57;
+    caret-color: white;
+    outline: none;
+  }
+}
