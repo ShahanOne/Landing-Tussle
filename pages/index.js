@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import ReactMarkdown from 'react-markdown'
-import MarkdownStyles from '../styles/ReactMarkdown.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import ReactMarkdown from 'react-markdown';
+import MarkdownStyles from '../styles/ReactMarkdown.module.css';
 
 export default function Home() {
   return (
@@ -14,10 +14,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-      <ReactMarkdown  className={MarkdownStyles.lolo}>
-      # Hello, *world*!
-      [I'm a hero lmao](https://shahanone.wordpress.com/ "get a load of this")
-      </ReactMarkdown>
+        <ReactMarkdown className={MarkdownStyles.lolo}>
+          # Hello, *world*! [I am a hero lmao](https://shahanone.wordpress.com/)
+        </ReactMarkdown>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -68,5 +67,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }

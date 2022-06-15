@@ -4,7 +4,7 @@ import remarkGfm from 'remark-gfm';
 import styles from './index.module.scss';
 import markdownStyles from './markdown.module.scss';
 
-function index() {
+function Index() {
   const [MDText, setMDText] = useState('');
   return (
     <div className={styles.md_wrapper}>
@@ -21,11 +21,12 @@ function index() {
       <p className={styles.headings}>HTML Output</p>
       <ReactMarkdown
         className={markdownStyles.markdown}
-        children={MDText}
         remarkPlugins={[remarkGfm]}
-      />
+      >
+        {MDText}
+      </ReactMarkdown>
     </div>
   );
 }
 
-export default index;
+export default Index;
