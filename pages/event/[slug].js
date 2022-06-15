@@ -300,41 +300,15 @@ function Index({ event }) {
                 onChange={(e) => setMDText(e.target.value)}
               ></textarea>
               <p className={markdownInputStyles.headings}>Description</p>
-              <ReactMarkdown children={MDText} remarkPlugins={[remarkGfm]} />
-              {/* <p>
-                Welcome to the Labor & Birth Preparation Workshop! This workshop
-                is specially designed for expecting parents who are looking to
-                have a positive birthing experience. In this 2 hours live
-                session, we will be covering how to promote optimal fetal
-                positioning, exercises to help engage the baby and pelvic floor
-                exercises to prevent tearing and episiotomy. We will be covering
-                in detail Stages of Labor, what to expect at each stage and
-                Natural Pain Management techniques you can employ for different
-                stages. We will discuss how your partner can support you in this
-                journey. Apart from this, we will also cover medical pain
-                management options, common interventions to expect and what to
-                do immediately postpartum.
-              </p> */}
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {MDText}
+              </ReactMarkdown>
               {showMore ? (
                 <div style={{ margin: 0 }}>
                   <br />
                   <b>Topics Covered</b>
                   <ol className={styles.list}>
-                    <li>How to promote Optimal Fetal Positioning</li>
-                    <li>Fetal Station</li>
-                    <li>Exercises to promote fetal head engagement</li>
-                    <li>Pelvic Floor Exercises - Kegels & Perineal Massage</li>
-                    <li>Signs of Labor</li>
-                    <li>True vs False Labor</li>
-                    <li>When to go to the hospital</li>
-                    <li>Stages of Labor</li>
-                    <li>How Labor works</li>
-                    <li>Natural Labor Pain Management techniques</li>
-                    <li>Role of Partner</li>
-                    <li>Common medical interventions</li>
-                    <li>Medical Pain management options</li>
-                    <li>C-section</li>
-                    <li>Immediate Postpartum.</li>
+                    <li>List of Topics</li>
                   </ol>
                   <b>Who is this for?</b>
                   <p style={{ marginTop: 0 }}>
