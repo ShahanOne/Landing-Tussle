@@ -11,6 +11,7 @@ function skeleton() {
         <SkeletonTheme color="#5e6c77" highlightColor="#a9b7c1">
           <p>
             <Skeleton count={3} duration={2} />
+            <h1>Sike Nigga!</h1>
           </p>
         </SkeletonTheme>
       </div>
