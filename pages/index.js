@@ -14,9 +14,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <ReactMarkdown className={MarkdownStyles.lolo}>
+        {/* <ReactMarkdown className={MarkdownStyles.lolo}>
           # Hello, *world*! [I am a hero lmao](https://shahanone.wordpress.com/)
-        </ReactMarkdown>
+        </ReactMarkdown> */}
 
         <p className={styles.description}>
           Get started by editing{' '}
