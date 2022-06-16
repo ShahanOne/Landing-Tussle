@@ -4,19 +4,25 @@ import eventPageStyles from './index.module.scss';
 function Index(events) {
   const eventsData = events.events;
   return (
-    <div className={eventPageStyles.mainDiv}>
-      <p className={eventPageStyles.mainHeading}>Upcoming Events</p>
+    <>
+      {eventsData ? (
+        <div className={eventPageStyles.mainDiv}>
+          <p className={eventPageStyles.mainHeading}>Upcoming Events</p>
 
-      {eventsData.map((event, index) => (
-        <div
-          key={index}
-          style={{ color: 'black' }}
-          className={eventPageStyles.eventCard}
-        >
-          <Link href={`event/${event.slug}`}>{event.title}</Link>
+          {eventsData.map((event, index) => (
+            <div
+              key={index}
+              style={{ color: 'black' }}
+              className={eventPageStyles.eventCard}
+            >
+              <Link href={`event/${event.slug}`}>{event.title}</Link>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      ) : (
+        'lmao rekt'
+      )}
+    </>
   );
 }
 

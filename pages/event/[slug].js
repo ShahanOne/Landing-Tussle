@@ -197,201 +197,207 @@ function Index({ event }) {
   }, []);
   return (
     <div>
-      <div className={styles.mainContainer}>
-        <nav className={styles.topNav}>
-          <div className={styles.leftContainer}>
-            <img
-              className={styles.brandIcon}
-              src="/images/Tussle_Favicon.png"
-              alt="tussle logo"
-            />
-            <a href="https://www.tussle.fit" className={styles.brandName}>
-              Tussle.fit
-            </a>
-          </div>
-          <div className={styles.rightContainer}>
-            <a href="https://www.tussle.fit" className={styles.navlink}>
-              Support
-            </a>
-            <a
-              href="https://www.tussle.fit/about-us"
-              className={styles.navlink}
-            >
-              About
-            </a>
-            <button type="button" className={styles.navlink}>
-              Log out
-            </button>
-          </div>
-        </nav>
-        <div className={styles.infoContainer1}>
-          <p className={styles.breadCrump}>
-            {tags.map((tag, index, arr) => (
-              <span key={index}>
-                <span>{tag}</span>
-                <span>{index < arr.length - 1 ? ' | ' : null}</span>
-              </span>
-            ))}
-          </p>
-          <div className={styles.bottomPart}>
-            <div className={styles.leftPart}>
-              <h1 className={styles.title}>
-                {title} with {instructorName}
-              </h1>
-              <div className={styles.dateNLocation}>
-                <p className={styles.location}>{locationText}</p>
-              </div>
+      {event ? (
+        <div className={styles.mainContainer}>
+          <nav className={styles.topNav}>
+            <div className={styles.leftContainer}>
+              <img
+                className={styles.brandIcon}
+                src="/images/Tussle_Favicon.png"
+                alt="tussle logo"
+              />
+              <a href="https://www.tussle.fit" className={styles.brandName}>
+                Tussle.fit
+              </a>
             </div>
-            {/* <div className={styles.share}>
+            <div className={styles.rightContainer}>
+              <a href="https://www.tussle.fit" className={styles.navlink}>
+                Support
+              </a>
+              <a
+                href="https://www.tussle.fit/about-us"
+                className={styles.navlink}
+              >
+                About
+              </a>
+              <button type="button" className={styles.navlink}>
+                Log out
+              </button>
+            </div>
+          </nav>
+          <div className={styles.infoContainer1}>
+            <p className={styles.breadCrump}>
+              {tags.map((tag, index, arr) => (
+                <span key={index}>
+                  <span>{tag}</span>
+                  <span>{index < arr.length - 1 ? ' | ' : null}</span>
+                </span>
+              ))}
+            </p>
+            <div className={styles.bottomPart}>
+              <div className={styles.leftPart}>
+                <h1 className={styles.title}>
+                  {title} with {instructorName}
+                </h1>
+                <div className={styles.dateNLocation}>
+                  <p className={styles.location}>{locationText}</p>
+                </div>
+              </div>
+              {/* <div className={styles.share}>
               <img src="/images/shareIcon.svg" alt="shareicon" />
               <span>Share</span>
             </div> */}
-          </div>
-        </div>
-        <div
-          className={styles.heroCard}
-          style={{ backgroundImage: `url(${coverImage})` }}
-        >
-          <div className={styles.calendarCard}>
-            <div className={styles.month}>{dateParams.month}</div>
-            <div className={styles.date}>{dateParams.date}</div>
-            <div className={styles.week}>{dateParams.week}</div>
-          </div>
-        </div>
-        <div className={styles.instructorInfo1}>
-          <div className={styles.text}>
-            <p className={styles.topLine}>
-              Workshop hosted by {instructorName}
-            </p>
-            <p className={styles.bottomLine}>
-              {durationText} · Hosted in {language}
-            </p>
+            </div>
           </div>
           <div
-            className={styles.image}
-            style={{ backgroundImage: `url(${instructorImage})` }}
-          />
-        </div>
-        <div className={styles.middleSection}>
-          <div className={styles.left}>
-            <p className={styles.header}>Event Information</p>
-            <div className={styles.tagsContainer}>
-              {tags.map((tag, index) => (
-                <span
-                  key={index}
-                  style={{ backgroundColor: tagColors[index] }}
-                  className={styles.tag}
-                >
-                  {tag}
-                </span>
-              ))}
+            className={styles.heroCard}
+            style={{ backgroundImage: `url(${coverImage})` }}
+          >
+            <div className={styles.calendarCard}>
+              <div className={styles.month}>{dateParams.month}</div>
+              <div className={styles.date}>{dateParams.date}</div>
+              <div className={styles.week}>{dateParams.week}</div>
             </div>
-            <p className={styles.aboutHeader}>About the event</p>
-            <div className={styles.aboutText}>
-              {/* markdown */}
+          </div>
+          <div className={styles.instructorInfo1}>
+            <div className={styles.text}>
+              <p className={styles.topLine}>
+                Workshop hosted by {instructorName}
+              </p>
+              <p className={styles.bottomLine}>
+                {durationText} · Hosted in {language}
+              </p>
+            </div>
+            <div
+              className={styles.image}
+              style={{ backgroundImage: `url(${instructorImage})` }}
+            />
+          </div>
+          <div className={styles.middleSection}>
+            <div className={styles.left}>
+              <p className={styles.header}>Event Information</p>
+              <div className={styles.tagsContainer}>
+                {tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    style={{ backgroundColor: tagColors[index] }}
+                    className={styles.tag}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <p className={styles.aboutHeader}>About the event</p>
+              <div className={styles.aboutText}>
+                {/* markdown */}
 
-              <p className={markdownInputStyles.headings}>Input description</p>
-              <textarea
-                name="mdtext"
-                className={markdownInputStyles.mdinp}
-                cols="30"
-                rows="10"
-                value={MDText}
-                onChange={(e) => setMDText(e.target.value)}
-              ></textarea>
-              <p className={markdownInputStyles.headings}>Description</p>
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                {MDText}
-              </ReactMarkdown>
-              {showMore ? (
-                <div style={{ margin: 0 }}>
-                  <br />
-                  <b>Topics Covered</b>
-                  <ol className={styles.list}>
-                    <li>List of Topics</li>
-                  </ol>
-                  <b>Who is this for?</b>
-                  <p style={{ marginTop: 0 }}>
-                    Expecting parents in 28 to 40 weeks of pregnancy
-                  </p>
+                <p className={markdownInputStyles.headings}>
+                  Input description
+                </p>
+                <textarea
+                  name="mdtext"
+                  className={markdownInputStyles.mdinp}
+                  cols="30"
+                  rows="10"
+                  value={MDText}
+                  onChange={(e) => setMDText(e.target.value)}
+                ></textarea>
+                <p className={markdownInputStyles.headings}>Description</p>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {MDText}
+                </ReactMarkdown>
+                {showMore ? (
+                  <div style={{ margin: 0 }}>
+                    <br />
+                    <b>Topics Covered</b>
+                    <ol className={styles.list}>
+                      <li>List of Topics</li>
+                    </ol>
+                    <b>Who is this for?</b>
+                    <p style={{ marginTop: 0 }}>
+                      Expecting parents in 28 to 40 weeks of pregnancy
+                    </p>
+                  </div>
+                ) : null}
+                <div
+                  style={{
+                    cursor: 'pointer',
+                    fontFamily: 'Proxima Nova Bold',
+                    marginTop: '1.5rem',
+                  }}
+                  onClick={() => {
+                    setShowMore(!showMore);
+                  }}
+                >
+                  {showMore ? '...show less' : 'show more...'}
                 </div>
-              ) : null}
-              <div
-                style={{
-                  cursor: 'pointer',
-                  fontFamily: 'Proxima Nova Bold',
-                  marginTop: '1.5rem',
-                }}
-                onClick={() => {
-                  setShowMore(!showMore);
-                }}
-              >
-                {showMore ? '...show less' : 'show more...'}
               </div>
-            </div>
-            <div className={styles.knownFor}>
-              <p className={styles.header}>This workshop is known for</p>
-              <div className={styles.highlights}>
-                {knownFor.map((kf) => (
-                  <HighlightJamun
-                    key={kf.id}
-                    iconurl="/images/Calendar.svg"
-                    header={kf.header}
-                    description={kf.description}
-                    className={styles.jamun}
-                  />
-                ))}
-                <div className={styles.underline} />
+              <div className={styles.knownFor}>
+                <p className={styles.header}>This workshop is known for</p>
+                <div className={styles.highlights}>
+                  {knownFor.map((kf) => (
+                    <HighlightJamun
+                      key={kf.id}
+                      iconurl="/images/Calendar.svg"
+                      header={kf.header}
+                      description={kf.description}
+                      className={styles.jamun}
+                    />
+                  ))}
+                  <div className={styles.underline} />
+                </div>
               </div>
-            </div>
-            <div className={styles.whatsIncluded}>
-              <p className={styles.header}>What&apos;s Included</p>
-              <div className={styles.teaks}>
-                {whatsIncluded.map((wi) => (
-                  <HighlightTeak
-                    key={wi.id}
-                    iconurl="/images/Calendar.svg"
-                    text={wi.text}
-                    className={styles.teak}
-                  />
-                ))}
+              <div className={styles.whatsIncluded}>
+                <p className={styles.header}>What&apos;s Included</p>
+                <div className={styles.teaks}>
+                  {whatsIncluded.map((wi) => (
+                    <HighlightTeak
+                      key={wi.id}
+                      iconurl="/images/Calendar.svg"
+                      text={wi.text}
+                      className={styles.teak}
+                    />
+                  ))}
+                </div>
               </div>
+              <CardHippo
+                instructorName={instructorName}
+                instructorImage={instructorImage}
+                instructorQualification={instructorQualification}
+                instructorDetails={instructorDetails}
+                instructorContactLink={event.instructor[0].contact_link}
+                className={styles.hippo}
+              />
             </div>
-            <CardHippo
-              instructorName={instructorName}
-              instructorImage={instructorImage}
-              instructorQualification={instructorQualification}
-              instructorDetails={instructorDetails}
-              instructorContactLink={event.instructor[0].contact_link}
-              className={styles.hippo}
-            />
-          </div>
-          <div className={styles.right}>
-            <CardMantisShrimp
-              className={styles.mantisShrimp}
-              title={`${title} with ${instructorName}`}
-              fullDate={fullDateText}
-              eventLink={eventLink}
-              guestsData={guestsData}
-              remainingTimeText={remainingTimeText}
-              location={event.location}
-              remainingSpots={remainingSpots}
-              priceText={priceText}
-              setDateParams={setDateParams}
-              schedules={event.eventschedules
-                .sort(
-                  (schedule1, schedule2) =>
-                    new Date(schedule1.startDate) -
-                    new Date(schedule2.startDate)
-                )
-                .filter(
-                  (schedule) => new Date(schedule.startDate) > new Date()
-                )}
-              slug={event.slug}
-            />
+            <div className={styles.right}>
+              <CardMantisShrimp
+                className={styles.mantisShrimp}
+                title={`${title} with ${instructorName}`}
+                fullDate={fullDateText}
+                eventLink={eventLink}
+                guestsData={guestsData}
+                remainingTimeText={remainingTimeText}
+                location={event.location}
+                remainingSpots={remainingSpots}
+                priceText={priceText}
+                setDateParams={setDateParams}
+                schedules={event.eventschedules
+                  .sort(
+                    (schedule1, schedule2) =>
+                      new Date(schedule1.startDate) -
+                      new Date(schedule2.startDate)
+                  )
+                  .filter(
+                    (schedule) => new Date(schedule.startDate) > new Date()
+                  )}
+                slug={event.slug}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        'lmao rekt'
+      )}
       <div className={styles.mobileMainContainer}>
         <div
           className={styles.heroSection}
