@@ -4,6 +4,7 @@ import HighlightJamun from '../../components/highlights/HighlightJamun';
 import HighlightTeak from '../../components/highlights/HighlightTeak';
 import CardHippo from '../../components/cards/CardHippo';
 import CardMantisShrimp from '../../components/cards/CardMantisShrimp';
+import Skeleton from './Skeleton';
 
 import knownTimezones from '../../assets/timezones';
 import importantTimezones from '../../assets/importantTimezones';
@@ -197,7 +198,9 @@ function Index({ event }) {
   }, []);
   return (
     <div>
-      {event ? (
+      {!event ? (
+        <Skeleton />
+      ) : (
         <div className={styles.mainContainer}>
           <nav className={styles.topNav}>
             <div className={styles.leftContainer}>
@@ -395,8 +398,6 @@ function Index({ event }) {
             </div>
           </div>
         </div>
-      ) : (
-        'lmao rekt'
       )}
       <div className={styles.mobileMainContainer}>
         <div

@@ -5,23 +5,19 @@ function Index(events) {
   const eventsData = events.events;
   return (
     <>
-      {eventsData ? (
-        <div className={eventPageStyles.mainDiv}>
-          <p className={eventPageStyles.mainHeading}>Upcoming Events</p>
+      <div className={eventPageStyles.mainDiv}>
+        <p className={eventPageStyles.mainHeading}>Upcoming Events</p>
 
-          {eventsData.map((event, index) => (
-            <div
-              key={index}
-              style={{ color: 'black' }}
-              className={eventPageStyles.eventCard}
-            >
-              <Link href={`event/${event.slug}`}>{event.title}</Link>
-            </div>
-          ))}
-        </div>
-      ) : (
-        'lmao rekt'
-      )}
+        {eventsData.map((event, index) => (
+          <div
+            key={index}
+            style={{ color: 'black' }}
+            className={eventPageStyles.eventCard}
+          >
+            <Link href={`event/${event.slug}`}>{event.title}</Link>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
