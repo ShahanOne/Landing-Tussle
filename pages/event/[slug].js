@@ -4,7 +4,7 @@ import HighlightJamun from '../../components/highlights/HighlightJamun';
 import HighlightTeak from '../../components/highlights/HighlightTeak';
 import CardHippo from '../../components/cards/CardHippo';
 import CardMantisShrimp from '../../components/cards/CardMantisShrimp';
-import Skeleton from './Skeleton';
+import Skeleton from './skeleton';
 
 import knownTimezones from '../../assets/timezones';
 import importantTimezones from '../../assets/importantTimezones';
@@ -15,6 +15,7 @@ import calendarIcon from '../../assets/icons/Calendar.svg';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import markdownInputStyles from './markdownInput.module.scss';
+// import SkeletonEvent from './Skeleton';
 
 export async function getServerSideProps({ params }) {
   const results = await fetch(
